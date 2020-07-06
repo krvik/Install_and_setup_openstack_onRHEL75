@@ -1,0 +1,97 @@
+    1  xcbcbc
+    2  nvbnvn
+    3  ifconfig
+    4  ls
+    5  lsblk
+    6  df -h
+    7  ls
+    8  cd /
+    9  ls
+   10  mkdir /dvd
+   11  mount /dev/sdb1 /dvd
+   12  ls /dvd
+   13  mkdir /dvd1
+   14  cp /dvd/* /dvd1
+   15  cp -rvf /dvd/* /dvd1
+   16  ls /dvd1
+   17  clear
+   18  rm -rf /dvd1
+   19  ls
+   20  mkdir /dvd1
+   21  cp -rvf /dvd/* /dvd1
+   22  gedit /etc/yum.repos.d/dvd.repo
+   23  cat /etc/yum.repos.d/dvd.repo
+   24  ls
+   25  ls /etc/yum.repos.d/
+   26  rm -f /etc/yum.repos.d/redhat.repo
+   27  ls /etc/yum.repos.d/
+   28  yum repolist
+   29  yum list vim
+   30  ls /dvd1
+   31  ls /dvd1/Packages/
+   32  yum list wget
+   33  yum install wget
+   34  sestatus
+   35  setenforce 0
+   36  sestatus
+   37  ls
+   38  mkdir /iso_rhel7osp
+   39  mount /home/vikash/RHEL7OSP-13.0-20180628.2-x86_64.iso 
+   40  mount /home/vikash/RHEL7OSP-13.0-20180628.2-x86_64.iso  /iso_rhel7osp/
+   41  mkdir /openstack_software
+   42  cp /iso_rhel7osp/* /openstack_software/
+   43  rm -rf /openstack_software/
+   44  ls
+   45  mkdir /openstack_software
+   46  ls
+   47  cp -rvf /iso_rhel7osp/* /openstack_software/
+   48  ls /openstack_software/
+   49  mkdir /iso_rhel75_serverUpdate
+   50  mount /home/vikash/rhel-7.5-server-updates-20180628.iso  /iso_rhel75_serverUpdate/
+   51  cp -rf /iso_rhel75_serverUpdate/* /openstack_software/
+   52  ls /openstack_software/
+   53  mkdir /iso_rhel7_serverAdditional
+   54  mount /home/vikash/rhel-7-server-additional-20180628.iso  /iso_rhel7_serverAdditional/
+   55  cp -rf /iso_rhel7_serverAdditional/* /openstack_software/
+   56  ls /openstack_software/
+   57  gedit /etc/yum.repos.d/dvd.repo
+   58  cat /etc/yum.repos.d/dvd.repo
+   59  yum repolist
+   60  history
+   61  cd /openstack_software/
+   62  createrepo -v .
+   63  yum install createrepo
+   64  ls
+   65  lsblk
+   66  yum install openstack-packstack
+   67  yum repolist
+   68  yum clean all
+   69  yum repolist
+   70  yum install openstack-packstack
+   71  cat /etc/rc.d/rc.local 
+   72  history | grep mount
+   73  systemctl status NetworkManager
+   74  systemctl stop NetworkManager
+   75  systemctl status NetworkManager
+   76  systemctl disable NetworkManager
+   77  ifconfig
+   78  hostname
+   79  ping mypc
+   80  vi /etc/hosts
+   81  cat /etc/hosts
+   82  ping mypc
+   83  ping goo.gl
+   84  packsta
+   85  python -V
+   86  rpm -q python-setuptools
+   87  packstack --gen-answer-file=a.txt
+   88  cd
+   89  ls
+   90  cd /openstack_software/
+   91  ls
+   92  gedit a.txt 
+   93  vim a.txt 
+   94  gedit a.txt 
+   95  packstack --answer-file=a.txt
+   96  history
+   97  history > /home/vikash/openstack_command_history.txt
